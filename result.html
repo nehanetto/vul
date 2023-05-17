@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <h2>Result</h2>
+    {% if vulnerabilities %}
+        <h3>Vulnerabilities Detected:</h3>
+        <ul>
+            {% for vulnerability in vulnerabilities %}
+                <li>{{ vulnerability }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No vulnerabilities found.</p>
+    {% endif %}
+</body>
+</html>
